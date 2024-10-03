@@ -37,11 +37,9 @@ El desplegue esta contemplado en Vercel (Sugeto a modificaciones)
 
 
 
-## Versioning
+## Versionamiento
 
-We use [Semantic Versioning](http://semver.org/) for versioning. For the versions
-available, see the [tags on this
-repository](https://github.com/PurpleBooth/a-good-readme-template/tags).
+Se implementara Git y Git Hub en formato privado para el uso y manejo de versiones, todos los miembros del equipo deben disponer de un branch y solicitar aprovación de cambios mediante Request.
 
 ## Equipo de desarrollo
 
