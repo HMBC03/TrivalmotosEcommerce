@@ -44,7 +44,8 @@ Se implementara Git y Git Hub en formato privado para el uso y manejo de version
 ## Equipo de desarrollo
 
  Hector Manuel Beltran Cifuentes [https://github.com/HMBC03]
- Carlos Mora []
+ 
+ Carlos Mora [https://github.com/charlymora332]
 
 
 ## Licencia
