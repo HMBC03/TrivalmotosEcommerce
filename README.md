@@ -12,11 +12,17 @@ Para dar una amplia cobertura y mejor gestión se implementa SQL con modelos rel
 ### Requisitos para el equipo de desarrollo.
 
 -Asegurse de obtener los permisos necesarios tanto de repositorio como variables de entorno.
+
 -Configure su entorno de desarrollo.
+
 -Antes de un commit verifique su branch y los cambios del equipo (EVITE MODIFICAR ESPACIOS EN BLANCO).
+
 -Configure su proyecto React.
+
 -No añada paquetes que no se usaran.
+
 -Configure su documento .gitignore (No envie archivos ocultos)
+
 
 #Diseño Figma
 
