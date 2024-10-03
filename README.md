@@ -1,6 +1,4 @@
-# Titulo del proyecto
-
-Trivalmotos Ecommerce
+# Trivalmotos Ecommerce
 
 
 ## Conocimientos Previos
