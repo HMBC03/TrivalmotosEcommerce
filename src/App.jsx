@@ -1,55 +1,30 @@
 import { useState } from "react";
 
 import "./styles/App.css";
-import Input from "./components/Input";
-import Boton from "./components/Boton";
-import imgPrincipal from "./assets/register/principal.jpg";
-import logoGoogle from "./assets/login/logoGoogle.svg";
-import ojoPass from "./assets/login/ojoPass.png";
-
+import Header from './components/Header'
+import imgContacto from './assets/index/imgContacto.jpg'
+import Input from './components/Input'
+import Boton from './components/Boton'
 function App() {
-
-
   return (
-    <div className="body">
-      <div className="contenedorForm">
-        <h1>Registrese</h1>
-        <div className="contenedortext">
-          <form className="">
-            <Input label={""} placeholder={"Nombre:"} type={"text"} />
-            <Input label={""} placeholder={"Teléfono:"} type={"number"} />
-            <Input label={""} placeholder={"E-mail:"} type={"email"} />
-            <div className="inputPass">
-              <Input label={""} placeholder={"Contraseña:"} type={"password"} />
+    <div>
+      <Header />
+      <section className="contacto">
+        <img src={imgContacto} alt="img Contacto" />
 
-              <img src={ojoPass} alt="" />
-            </div>
+        <form action="">
+          <h5>Completa el formulario</h5>
+          <Input type={"text"} placeholder={"Nombre:"} />
+          <Input type={"email"} placeholder={"Correo Electronico:"} />
+          <Input type={"number"} placeholder={"Teléfono:"} />
+          <Input type={"text"} placeholder={"Ingrese su solicitud (Para consultas registre la referenciade su pedido)"} />
+          <br />
+          <Boton texto={"Enviar"}/>
 
-            <div className="inputPass">
-              <Input label={""} placeholder={"Repita la Contraseña:"} type={"password"} />
+        </form>
+       
+      </section>
 
-              <img src={ojoPass} alt="" />
-            </div>
-
-            <br />
-            <Boton texto={"Unirse"} />
-            <h6 className="decoracion">o</h6>
-          </form>
- 
-          <button className="loginGoogle">
-            <img src={logoGoogle} alt="Logo" />
-            <h6>Ingresar con Google</h6>
-          </button>
-
-          <h6>
-          ¿Ya tiene una cuenta? 
-            <a href="https://www.youtube.com/watch?v=k3Bf5VexjIo&list=RDfVKX20klaUU&index=13">
-              Iniciar sesión
-            </a>
-          </h6>
-        </div>
-      </div>
-      <img src={imgPrincipal} alt="img de moto" />
     </div>
   );
 }

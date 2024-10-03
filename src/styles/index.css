@@ -36,6 +36,8 @@ h6 {
 a{
   font-size: 0.8rem; /* 20px */
   font-weight: 700; /* Normal */
+  text-decoration: none;
+  color: black;
 }
 
 p {
