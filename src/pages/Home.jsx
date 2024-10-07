@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import "./Home.css";
 import Header from "../components/Header";
-import imgContacto from "../assets/index/imgContacto.jpg";
+import imgContacto from "../assets/home/imgContacto.jpg";
 import Input from "../components/Input";
 import Boton from "../components/Boton";
-import imgPrincipal1 from "../assets/index/imgPrincipal1.jpg";
-import imgPrincipal2 from "../assets/index/imgPrincipal2.jpg";
+import imgPrincipal1 from "../assets/home/imgPrincipal1.jpg";
+import imgPrincipal2 from "../assets/home/imgPrincipal2.jpg";
 import { Link } from 'react-router-dom';
 
 

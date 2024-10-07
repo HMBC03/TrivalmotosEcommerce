@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "./Contacto.css";
 import Header from "../components/Header";
-import imgContacto from "../assets/index/imgContacto.jpg";
+import imgContacto from "../assets/home/imgContacto.jpg";
 import Input from "../components/Input";
 import Boton from "../components/Boton";
 

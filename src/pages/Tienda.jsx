@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 import "./Tienda.css";
 import Header from "../components/Header";
-import iconoCarrito from "../assets/index/iconoCarrito.svg";
+import iconoCarrito from "../assets/home/iconoCarrito.svg";
 
 import ArticuloPre from "../components/ArticuloPre";
 import Input from '../components/Input'
-import iconoBuscar from '../assets/index/iconoBuscar.svg'
+import iconoBuscar from '../assets/home/iconoBuscar.svg'
 import producto from '../assets/productos/producto'
 
 

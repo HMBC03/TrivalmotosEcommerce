@@ -1,10 +1,10 @@
 import React from "react";
 
 import "./Header.css";
-import iconoCarrito from "../assets/index/iconoCarrito.svg";
-import iconoFavoritos from "../assets/index/iconoFavoritos.svg";
-import iconoLupa from "../assets/index/iconoLupa.svg";
-import iconoUsuario from "../assets/index/iconoUsuario.svg";
+import iconoCarrito from "../assets/home/iconoCarrito.svg";
+import iconoFavoritos from "../assets/home/iconoFavoritos.svg";
+import iconoLupa from "../assets/home/iconoLupa.svg";
+import iconoUsuario from "../assets/home/iconoUsuario.svg";
 import { Link } from "react-router-dom";
 
 export default function Header() {

@@ -2,8 +2,6 @@ import React from "react";
 import './ArticuloPre.scss'
 import Boton from './Boton'
 
-import iconoCarrito from '../assets/index/iconoCarrito.svg'
-
 
 function ArticuloPre({img, alt, nombre, precio,}) {
   return (
