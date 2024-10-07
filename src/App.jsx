@@ -1,11 +1,11 @@
 import React from "react";
 import "./styles/App.css";
-import Header from "./components/Header";
-import iconoCarrito from "./assets/index/iconoCarrito.svg";
+// import Header from "./components/Header";
+// import iconoCarrito from "./assets/index/iconoCarrito.svg";
 
-import ArticuloPre from "./components/ArticuloPre";
-import Input from './components/Input'
-import iconoBuscar from './assets/index/iconoBuscar.svg'
+// import ArticuloPre from "./components/ArticuloPre";
+// import Input from './components/Input'
+// import iconoBuscar from './assets/index/iconoBuscar.svg'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Home from './pages/Home'
@@ -15,7 +15,7 @@ import Tienda from './pages/Tienda'
 import Contacto from './pages/Contacto'
 
 
-
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -36,6 +36,8 @@ function App() {
      <Route path="/tienda" element={<Tienda />} />
      
      <Route path="/contacto" element={<Contacto />} />
+     <Route path="*" element={<NotFound />} />
+
    </Routes>
  </Router>
   );
