@@ -15,7 +15,7 @@ import Tienda from './pages/Tienda'
 import Contacto from './pages/Contacto'
 
 
-import NotFound from './pages/NotFound';
+
 
 function App() {
   return (
@@ -36,7 +36,6 @@ function App() {
      <Route path="/tienda" element={<Tienda />} />
      
      <Route path="/contacto" element={<Contacto />} />
-     <Route path="*" element={<NotFound />} />
 
    </Routes>
  </Router>
