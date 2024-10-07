@@ -9,7 +9,9 @@ header{
     box-sizing: border-box;
   
   }
-  
+  header h3{
+    font-weight: 700;
+  }
   
   nav ul{
     display: flex;
@@ -42,6 +44,25 @@ header{
     height: 100%;
   
   }
+  .linkPag, .contenedorRedireccion ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     padding: 0.3rem 0.4rem;
+     border-radius: 50px;
+     transition: all 0.1s ease-in-out;
+     line-height: 0.9;
+
+  }
+  .linkPag:hover, .contenedorRedireccion ul li:hover{
+     background-color: #ececec;
+
+    transform: scale(1.2);
+ 
+
+
+ }
   
   .contenedorIconos a img{
     

@@ -1,15 +1,19 @@
 
 import "./Login.css";
-import Input from "./components/Input";
-import Boton from "./components/Boton";
-import imgPrincipal from "./assets/login/principal.jpg";
-import ojoPass from "./assets/login/ojoPass.png";
+import Input from "../components/Input";
+import Boton from "../components/Boton";
+import imgPrincipal from "../assets/login/principal.jpg";
+import ojoPass from "../assets/login/ojoPass.png";
+import logoGoogle from '../assets/login/logoGoogle.svg'
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
 
 function Login() {
 
   return (
     <div className="body">
       <div className="contenedorForm">
+        <Header/>
       <h1>Iniciar Sesión</h1> 
         <div className="contenedortext"> 
 
@@ -40,7 +44,7 @@ function Login() {
       <h6>Ingresar con Google</h6>
     </button>
 
-  <h6>¿No tiene una cuenta? <a href="https://www.youtube.com/watch?v=k3Bf5VexjIo&list=RDfVKX20klaUU&index=13">Registrese</a></h6>
+  <h6>¿No tiene una cuenta?<Link to="/register">Registrese</Link></h6>
       
       </div>
       </div>

@@ -4,31 +4,3 @@
   padding: 0;
   
 }
-
-
-/* desde aca pasa para la nueva pagina */
-.contacto{
-
-  height: max-content;
-  width: 100%;
-  padding: 0 2rem 2rem;
-  box-sizing: border-box;
-}
-.contacto img{
-  width: 100%;
-  border-radius: 40px;
-
-}
-form{
-  
-  text-align: center;
-  gap: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-form h5{
-  font-weight: 700;
-}
-

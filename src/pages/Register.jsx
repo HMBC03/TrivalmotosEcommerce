@@ -1,18 +1,20 @@
 
-import "./styles/Register.css";
-import Input from "./components/Input";
-import Boton from "./components/Boton";
-import imgPrincipal from "./assets/register/principal.jpg";
-import logoGoogle from "./assets/login/logoGoogle.svg";
-import ojoPass from "./assets/login/ojoPass.png";
-
-
+import "./Register.css";
+import Input from "../components/Input";
+import Boton from "../components/Boton";
+import imgPrincipal from "../assets/register/principal.jpg";
+import logoGoogle from "../assets/login/logoGoogle.svg";
+import ojoPass from "../assets/login/ojoPass.png";
+import { Link } from "react-router-dom";
+import Header from "../components/Header";
 export default function Register() {
   return (
     <div className="body">
     <div className="contenedorForm">
+      <Header/>
       <h1>Registrese</h1>
       <div className="contenedortext">
+
         <form className="">
           <Input label={""} placeholder={"Nombre:"} type={"text"} />
           <Input label={""} placeholder={"Teléfono:"} type={"number"} />
@@ -41,9 +43,8 @@ export default function Register() {
 
         <h6>
         ¿Ya tiene una cuenta? 
-          <a href="https://www.youtube.com/watch?v=k3Bf5VexjIo&list=RDfVKX20klaUU&index=13">
-            Iniciar sesión
-          </a>
+          
+          <Link to="/login"> Iniciar sesión</Link>
         </h6>
       </div>
     </div>
