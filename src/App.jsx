@@ -8,7 +8,7 @@ import "./styles/App.css";
 // import iconoBuscar from './assets/index/iconoBuscar.svg'
 
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Home from './pages/Home'
+import Trivalmotos from './pages/Trivalmotos'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Tienda from './pages/Tienda'
@@ -24,7 +24,7 @@ function App() {
    {/* Aquí dentro definimos nuestras rutas usando el componente Routes */}
    <Routes>
      {/* Ruta para la página principal */}
-     <Route path="/" element={<Home />} />
+     <Route path="/Trivalmotos" element={<Trivalmotos />} />
      
      {/* Ruta para la página de login */}
      <Route path="/login" element={<Login />} />

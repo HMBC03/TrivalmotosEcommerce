@@ -1,5 +1,5 @@
 import React from "react";
-import './ArticuloPre.scss'
+import './ArticuloPre.css'
 import Boton from './Boton'
 
 

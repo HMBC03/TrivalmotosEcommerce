@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./Home.css";
+import "./Trivalmotos.css";
 import Header from "../components/Header";
 import imgContacto from "../assets/home/imgContacto.jpg";
 import Input from "../components/Input";
@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 
 
 
-function Home() {
+function Trivalmotos() {
     const images = [
         imgPrincipal2, // Asegúrate de cambiar a las rutas correctas de tus imágenes
         imgPrincipal1,
@@ -87,4 +87,4 @@ function Home() {
   )
 }
 
-export default Home
+export default Trivalmotos

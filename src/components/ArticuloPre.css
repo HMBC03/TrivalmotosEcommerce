@@ -9,32 +9,31 @@
     box-shadow: 0 4px 15px rgba(156, 156, 156, 0.2); /* Sombra */
     border-radius: 20px;
 
- 
+}
 
-    h5,
-    h6 {
+.ctnArticuloPre h5,
+.ctnArticuloPre h6 {
         margin: 0;
         font-weight: 700;
     }
 
-    img {
+    .ctnArticuloPre  img {
         height: 70%;
-        width: auto; // Mantener proporción de imagen
+        width: auto; 
         aspect-ratio: 1;
     }
-    a {
+    .ctnArticuloPre  a {
         font-size: 0.5rem;
     }
-    span{
+    .ctnArticuloPre  span{
        
         display: flex;
         gap: 0.3rem;
     }
-    div{
+    .ctnArticuloPre  div{
         display: flex;
         flex-direction: column;
  
         height: 30%;
        
     }
-}
