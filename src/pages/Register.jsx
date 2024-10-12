@@ -44,7 +44,7 @@ export default function Register() {
         <h6>
         ¿Ya tiene una cuenta? 
           
-          <Link to="/login"> Iniciar sesión</Link>
+          <Link to="/Trivalmotos/login"> Iniciar sesión</Link>
         </h6>
       </div>
     </div>

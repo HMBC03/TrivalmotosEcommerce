@@ -6,6 +6,7 @@ import imgContacto from "../assets/home/imgContacto.jpg";
 import Input from "../components/Input";
 import Boton from "../components/Boton";
 
+
 export default function Contacto() {
   return (
     <div>

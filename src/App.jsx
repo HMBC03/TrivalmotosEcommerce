@@ -13,7 +13,7 @@ import Login from './pages/Login'
 import Register from './pages/Register'
 import Tienda from './pages/Tienda'
 import Contacto from './pages/Contacto'
-
+import EnDesarrollo from './pages/EnDesarrollo'
 
 
 
@@ -26,16 +26,12 @@ function App() {
      {/* Ruta para la página principal */}
      <Route path="/Trivalmotos" element={<Trivalmotos />} />
      
-     {/* Ruta para la página de login */}
-     <Route path="/login" element={<Login />} />
-     
-     {/* Ruta para la página de registro */}
-     <Route path="/register" element={<Register />} />
-     
-     {/* Ruta para la página de la tienda */}
-     <Route path="/tienda" element={<Tienda />} />
-     
-     <Route path="/contacto" element={<Contacto />} />
+     <Route path="/Trivalmotos/login" element={<Login />} />
+     <Route path="*" element={<EnDesarrollo />} />
+
+        <Route path="/Trivalmotos/register" element={<Register />} />
+        <Route path="/Trivalmotos/tienda" element={<Tienda />} />
+        <Route path="/Trivalmotos/contacto" element={<Contacto />} />
 
    </Routes>
  </Router>

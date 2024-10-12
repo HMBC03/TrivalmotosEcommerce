@@ -44,7 +44,7 @@ function Login() {
       <h6>Ingresar con Google</h6>
     </button>
 
-  <h6>¿No tiene una cuenta?<Link to="/register">Registrese</Link></h6>
+  <h6>¿No tiene una cuenta?<Link to="/Trivalmotos/register">Registrese</Link></h6>
       
       </div>
       </div>

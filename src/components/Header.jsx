@@ -10,39 +10,39 @@ import { Link } from "react-router-dom";
 export default function Header() {
   return (
     <header>
-      <Link to="/" ><h3>Trivalmotos</h3></Link>
+      <Link to="/Trivalmotos" ><h3>Trivalmotos</h3></Link>
 
       <nav className="contenedorRedireccion">
         <ul>
           <li >
-            <Link to="/tienda" >Tienda</Link>
+            <Link to="/Trivalmotos/tienda" >Tienda</Link>
           </li>
           <li >
-          <Link to="/contacto">Contacto</Link>
+          <Link to="/Trivalmotos/contacto">Contacto</Link>
           </li>
           <li>
-            <a href="/ofertas" >Ofertas</a>
+            <Link to="/Trivalmotos/EnDesarrollo" >Ofertas</Link>
           </li>
         </ul>
       </nav>
 
       <div className="contenedorIconos">
-        <a href="/buscar" aria-label="Buscar" className="linkPag">
+        <Link to="/Trivalmotos/EnDesarrollo" aria-label="Buscar" className="linkPag">
           <img src={iconoLupa} alt="Buscar" />
-        </a>
+        </Link>
      
-        <Link to="/login" aria-label="Perfil" className="linkPag">
+        <Link to="/Trivalmotos/login" aria-label="Perfil" className="linkPag">
          
           <img src={iconoUsuario} alt="Usuario" />
          
         </Link>
 
-        <a href="/favoritos" aria-label="Favoritos" className="linkPag" >
+        <Link to="/Trivalmotos/EnDesarrollo" aria-label="Favoritos" className="linkPag" >
           <img src={iconoFavoritos} alt="Favoritos" />
-        </a>
-        <a href="/carrito" aria-label="Carrito de compras" className="linkPag">
+        </Link>
+        <Link to="/Trivalmotos/EnDesarrollo" aria-label="Carrito de compras" className="linkPag">
           <img src={iconoCarrito} alt="Carrito" />
-        </a>
+        </Link>
       </div>
     </header>
   );

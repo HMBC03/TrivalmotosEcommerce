@@ -78,7 +78,7 @@ function Trivalmotos() {
               <div className="ctntexto">
                 <h1>Repuestos <br/> originales</h1>
                 <span>
-                  <Link to="/tienda">Tienda</Link> <a href="">Conoce más</a>{" "}
+                  <Link to="/Trivalmotos/tienda">Tienda</Link> <Link to="Trivalmotos/EnDesarrollo">Conoce más</Link>{" "}
                 </span>
               </div>
             </div>
