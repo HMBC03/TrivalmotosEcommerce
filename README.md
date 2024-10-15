@@ -31,7 +31,7 @@ https://www.figma.com/design/uSuWFZIQxjbYet7CIEgpNK/Trivalmotos?node-id=0-1&t=RC
 
 ## Deployment
 
-El desplegue esta contemplado en Vercel (Sugeto a modificaciones)
+El desplegue esta contemplado en Vercel (Sujeto a modificaciones)
 
 
 
