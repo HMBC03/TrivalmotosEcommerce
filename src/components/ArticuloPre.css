@@ -4,6 +4,7 @@
 
     height: 100%;
     width: 100%;
+    justify-content: center;
     box-sizing: border-box;
     padding: 1rem 0.8rem 2rem;
     box-shadow: 0 4px 15px rgba(156, 156, 156, 0.2); /* Sombra */
@@ -19,8 +20,8 @@
 
     .ctnArticuloPre  img {
         height: 70%;
-        width: auto; 
-        aspect-ratio: 1;
+        width: auto;
+        object-fit: contain;
     }
     .ctnArticuloPre  a {
         font-size: 0.5rem;

@@ -1,4 +1,11 @@
-header{
+.ctnHeader{
+position: relative;
+
+
+
+}
+  
+  header{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -11,7 +18,27 @@ header{
   }
   header h3{
     font-weight: 700;
+    margin: 0;
   }
+  
+
+  .ctnNavegacion{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+
+  }
+
+  .ocultar{
+
+    display: none;
+
+
+    
+  }
+
   
   nav ul{
     display: flex;
@@ -68,4 +95,95 @@ header{
     
     height: 100%;
   
+  }
+
+
+.menuDesplegable{
+  width: auto;
+  aspect-ratio: 1;
+  height: 1.5rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: .5rem; 
+  z-index: 100;
+  display: none;
+}
+.menuDesplegable img{
+  
+  height: 100%;
+}
+
+
+
+  /* @media only screen and (max-width: 800px) {
+    body {
+      background-color: rgb(0, 191, 255);
+    }
+    .contenedorRedireccion{
+   
+    }
+  } */
+  @media only screen and (max-width: 850px) {
+    body {
+   height: max-content;
+    }
+
+    .menuDesplegable{
+      display: block;
+
+
+    }
+    header{
+      height: max-content;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      padding: 0;
+
+
+      
+    }
+    header h3{
+      font-size: 1.4rem;
+      
+    }
+    .ctnNavegacion{
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+     height: calc(100vh);
+     background-color: red;
+     display: none;
+     
+    }
+
+
+
+
+    .contenedorRedireccion ul, .contenedorIconos{
+      display: flex;
+      flex-direction: column;
+      text-align: start;
+      width: 100%;
+      justify-content: center;
+      align-items: start;
+      height: max-content;
+      padding: 0;
+   
+
+      
+    }
+
+    
+    .contenedorIconos{
+      flex-direction: row;
+      text-align: start;
+      justify-content: start;
+      align-items: start;
+      height: 1.5rem;
+    }
+
+
+    
   }
