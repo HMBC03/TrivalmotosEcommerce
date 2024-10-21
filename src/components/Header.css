@@ -103,6 +103,7 @@ position: relative;
   
   }
 
+  
 
 .menuDesplegable{
   width: auto;
@@ -236,3 +237,18 @@ position: relative;
 
     
   }
+
+  @media screen and (max-width: 720px) {
+
+    header{
+      background-color: aqua;
+      display: none;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      height: 10vh;
+      width: 100vw;
+      padding: 0 1rem;
+      box-sizing: border-box;
+    
+    }}

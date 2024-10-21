@@ -87,7 +87,8 @@ function Login() {
           </h6>
         </div>
       </div>
-      <img src={imgPrincipal} alt="img de moto" />
+      <img className="bannerLogin" src={imgPrincipal} alt="img de moto" />
+
     </div>
   );
 }
