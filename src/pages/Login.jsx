@@ -13,42 +13,42 @@ function Login() {
   return (
     <div className="body">
       <div className="contenedorForm">
-        <Header/>
-      <h1>Iniciar Sesión</h1> 
-        <div className="contenedortext"> 
+        <Header />
+        <h1>Iniciar Sesión</h1>
+        <div className="contenedortext">
 
-  
-     
-        
+
+
+
           <form className="">
-        
-          <Input label={""} placeholder={"E-mail:"} type={"email"} />
-          <div className="inputPass">
-                 
-            <Input label={""} placeholder={"Contraseña:"} type={"password"} /> 
-            
-            <img src={ojoPass} alt="" />
+
+            <Input label={""} placeholder={"E-mail:"} type={"email"} />
+            <div className="inputPass">
+
+              <Input label={""} placeholder={"Contraseña:"} type={"password"} />
+
+              <img src={ojoPass} alt="" />
             </div>
 
-          <br/>
-          <Boton texto={"Ingresar"} />
-  <h6 className="decoracion">o</h6>
+            <br />
+            <Boton texto={"Ingresar"} />
+            <h6 className="decoracion">o</h6>
 
-  </form>
-  {/* <div >
+          </form>
+          {/* <div >
     <img src={logoGoogle} alt="logo de Google" />
     <Boton texto={"⌘  Ingresar con Google "} bgc="white" style={{ color: "black"}} />
   </div> */}
-  <button className="loginGoogle">
-      <img src={logoGoogle} alt="Logo"/>
-      <h6>Ingresar con Google</h6>
-    </button>
+          <button className="loginGoogle">
+            <img src={logoGoogle} alt="Logo" />
+            <h6>Ingresar con Google</h6>
+          </button>
 
-  <h6>¿No tiene una cuenta?<Link to="/Trivalmotos/register">Registrese</Link></h6>
-      
+          <h6>¿No tiene una cuenta?<Link to="/Trivalmotos/register">Registrese</Link></h6>
+
+        </div>
       </div>
-      </div>
-      <img src={imgPrincipal} alt="img de moto" />
+      <img className="bannerLogin" src={imgPrincipal} alt="img de moto" />
 
     </div>
   );
