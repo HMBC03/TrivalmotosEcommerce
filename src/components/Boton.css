@@ -1,0 +1,24 @@
+button{
+    border-radius: 8px;
+    width: 100%;
+    padding: 0.5rem 1rem 0.6rem ;
+    border: none;
+    font-weight: 600;
+    transition: all .1s;
+    font-size: 0.8rem;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color .7s;
+}
+button:hover{
+    color: #ffffff;
+    background-color: #000!important;
+    
+    
+    
+}
+
+@media screen and (max-width: 720px) {
+    
+
+}

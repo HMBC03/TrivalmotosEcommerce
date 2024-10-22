@@ -1,0 +1,144 @@
+#root {
+
+    margin: 0 ;
+    padding: 0;
+    
+  }
+  
+  
+  /* desde aca pasa para la nueva pagina */
+  /* decoracion pagina de contacto */
+  .contacto{
+    display: none; 
+    height: max-content;
+    width: 100%;
+    padding: 0 2rem 2rem;
+    box-sizing: border-box;
+  }
+  .contacto img{
+    width: 100%;
+    border-radius: 40px;
+  
+  }
+  form{
+    
+    text-align: center;
+    gap: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  form h5{
+    font-weight: 700;
+  }
+  
+  /* decoracion pagina de index */
+  .contenedorIndex{
+  
+  
+    height: calc(100vh - 4rem);
+    display: flex;
+    width: max-content;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 1rem;
+    box-sizing: border-box;
+    position: relative;
+  
+  
+  
+  
+  }
+  .contenedorIndex h1{
+    color: #fff;
+    font-weight: 900;
+    margin: 0;
+  }
+  .hola{
+  
+    position: relative;
+    height: 100%;
+    aspect-ratio: 18/9;
+    width: auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+  
+    z-index: 2;
+  
+  
+  
+  }
+  .carusel{
+    position: relative;
+   height: 100%;
+   width: 100%;
+  
+   overflow: hidden;
+   
+   z-index: 1;
+   left: 0;
+  }
+  .carusel-img {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 41px;
+    filter: contrast(1.1) brightness(0.5) saturate(2) hue-rotate(10deg) sepia(0.2);
+   /* Corrección del tiempo */
+  
+   
+    object-fit: cover;
+    position: absolute; /* Las imágenes se superponen unas sobre otras */
+    opacity: 0.1; /* Inicia invisible */
+    transition: filter 0.5s ease-in-out, opacity 1s ease-in;
+    z-index: 1;
+  }
+  
+  
+  
+  .carusel-img.active {
+   
+    opacity: 1; /* La imagen activa se muestra completamente */
+    z-index: 46; /* La imagen activa aparece sobre las demás */
+  
+    
+    /* Filtro especial para la imagen activa */
+    filter: contrast(1.3) brightness(0.8) saturate(2.5) hue-rotate(20deg) sepia(0.1);
+  }
+   /* 3 segundos por ciclo y se repite infinitamente */
+  
+  
+  
+  
+  .hola span{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .hola span a{
+  
+    font-weight: 600;
+    color: #fff;
+   }
+  .hola span a:first-child{
+   background-color: red;
+   border-radius: 1rem;
+   padding: 0.3rem 1rem;
+   color: #fff;
+  }
+  
+  .ctntexto{
+    position: absolute;
+    justify-content: center;
+    padding: 1rem;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    z-index: 3;
+    left: 0;
+    gap: 1rem;
+  }
