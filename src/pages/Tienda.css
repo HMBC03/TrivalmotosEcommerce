@@ -1,0 +1,58 @@
+.ctnApp {
+
+
+    height: 100vh;
+    
+}
+.ctnHeaderFiltro{
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.853);
+  backdrop-filter: blur(10px);
+}
+ .ctnProductos{
+   display: grid;
+   grid-template-rows: repeat(auto-fill, 420px); 
+   grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+   height: 80%;
+   width: 100%;
+   gap: 2rem;
+
+   box-sizing: border-box;
+   padding: 0 2rem 1rem;
+ }
+ .ctnError{
+  grid-column: 1 / -1;
+  
+  text-align: center;
+  align-items: center; 
+  justify-content: center;
+
+ }
+
+ .ctnBody{
+
+  width: 100%;
+
+
+  box-sizing: border-box;
+  flex: 1;
+  display: flex;
+  gap: 2rem;
+
+ }
+ .buscar{
+   position: relative;
+   width: 18rem;
+   height: max-content;
+  
+   background-color: black;
+ }
+ .buscar img{
+   position: absolute;
+   box-sizing: border-box;
+   padding: 10px;
+   right: 0;
+   height: 100%;
+   width: max-content;
+ }
