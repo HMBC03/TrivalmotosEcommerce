@@ -1,0 +1,55 @@
+.ctnGeneral{
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+
+}
+
+.errorContainer {
+    background-color: #f8f8f8;
+    width: auto;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    box-sizing: border-box;
+    padding: 1rem;
+    box-shadow: 0 0 58px rgba(0, 0, 0, 0.461);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+}
+
+.btnAtras{
+    background-color: red;
+    width: max-content;
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    font-weight: 700;
+    margin-top: 1rem;
+}
+
+.errorContainer h1{
+    margin: 0;
+}
+/* .errorTitle {
+    font-size: 48px;
+    color: #333;
+}
+
+.errorMessage {
+    font-size: 20px;
+    color: #666;
+}
+
+.errorEmojis {
+    font-size: 40px;
+    margin-top: 20px;
+} */

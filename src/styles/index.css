@@ -1,7 +1,7 @@
 html{
   padding: 0;
   margin: 0;
-  font-size: clamp(14px, 1.4vh + 1rem, 32px); 
+  font-size: clamp(14px, 1.4vw + 1rem, 24px); //* / max 28 estaba  */
 }
 
 h1 {
@@ -64,11 +64,20 @@ p {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
 
-  min-width: 320px;
+  min-width: 240px;
   min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%
 }
 
 *::-webkit-scrollbar {
@@ -76,7 +85,7 @@ body {
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #000; /* Color del 'thumb' */
+  background-color: #56565652; /* Color del 'thumb' */
   border-radius: 10px; /* Bordes redondeados */
 }
 

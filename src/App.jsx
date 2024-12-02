@@ -15,12 +15,13 @@ import Register from './pages/Register'
 import Tienda from './pages/Tienda'
 import Contacto from './pages/Contacto'
 import EnDesarrollo from './pages/EnDesarrollo'
+import CarritoDeCompras from './pages/CarritoDeCompras'
 
 
 
 function App() {
   return (
-   // Definimos el Router que envuelve toda la aplicación
+  //  Definimos el Router que envuelve toda la aplicación
    <Router>
    {/* Aquí dentro definimos nuestras rutas usando el componente Routes */}
    <Routes>
@@ -33,9 +34,14 @@ function App() {
         <Route path="/Trivalmotos/register" element={<Register />} />
         <Route path="/Trivalmotos/tienda" element={<Tienda />} />
         <Route path="/Trivalmotos/contacto" element={<Contacto />} />
-
+        <Route path="/Trivalmotos/tienda/CarritoDeCompras" element={<CarritoDeCompras />} />
    </Routes>
  </Router>
+
+// <CarritoDeCompras />
+
+
+
   );
 }
 

@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 
-import "./Contacto.css";
+
+import css from './Contacto.module.css';
+
 import Header from "../components/Header";
 import imgContacto from "../assets/home/imgContacto.jpg";
 import Input from "../components/Input";
@@ -14,10 +16,10 @@ export default function Contacto() {
   
      
           <Header />
-          <section className="contacto">
+          <section className={css.contacto}>
             <img src={imgContacto} alt="img Contacto" />
     
-            <form action="">
+            <form action="" className={css.form}>
               <h5>Completa el formulario</h5>
               <Input type={"text"} placeholder={"Nombre:"} />
               <Input type={"email"} placeholder={"Correo Electronico:"} />

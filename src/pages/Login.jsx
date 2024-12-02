@@ -1,4 +1,6 @@
-import "./Login.css";
+
+
+import css from './Login.module.css';
 import Input from "../components/Input";
 import Boton from "../components/Boton";
 import imgPrincipal from "../assets/login/principal.jpg";
@@ -8,6 +10,7 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import React, { useState } from "react";
 import axios  from 'axios'
+
 
 
 function Login() {
@@ -41,12 +44,20 @@ function Login() {
 
 
     return (
-    <div className="body">
-      <div className="contenedorForm">
-        <Header />
+    <div className={css.body}>
+      <div className={css.ctnInfo} id='hola'>
+ 
+    <div className={css.ctnHeader}>
+            <Header estilosTexto={true} />
+    </div>
+
+
+
+      <div className={css.contenedorForm}>
+      
         <h1>Iniciar Sesión</h1>
-        <div className="contenedortext">
-          <form className="">
+        <div className={css.contenedortext}>
+          <form className={css.form}> 
             <Input
               label={""}
               placeholder={"E-mail:"}
@@ -55,7 +66,7 @@ function Login() {
               funcion={actualizarInput}
               name={"user"}
             />
-            <div className="inputPass">
+            <div className={css.inputPass}>
               <Input
                 label={""}
                 placeholder={"Contraseña:"}
@@ -70,13 +81,10 @@ function Login() {
 
             <br />
             <Boton texto={"Ingresar"} funcion={enviarDatos} />
-            <h6 className="decoracion">o</h6>
+            <h6 className={css.decoracion}>o</h6>
           </form>
-          {/* <div >
-    <img src={logoGoogle} alt="logo de Google" />
-    <Boton texto={"⌘  Ingresar con Google "} bgc="white" style={{ color: "black"}} />
-  </div> */}
-          <button className="loginGoogle">
+ 
+          <button className={css.loginGoogle}>
             <img src={logoGoogle} alt="Logo" />
             <h6>Ingresar con Google</h6>
           </button>
@@ -86,8 +94,10 @@ function Login() {
             <Link to="/Trivalmotos/register">Registrese</Link>
           </h6>
         </div>
+        </div>
       </div>
-      <img className="bannerLogin" src={imgPrincipal} alt="img de moto" />
+      
+      <img className={css.banner} src={imgPrincipal} alt="img de moto" />
 
     </div>
   );

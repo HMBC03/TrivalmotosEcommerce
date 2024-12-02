@@ -1,0 +1,48 @@
+.ctn{
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.ctn img{
+    width: auto;
+    height: 200px;
+    width: 200px;
+}
+
+.cantidad{
+    display: flex;
+    flex-direction: row;
+}
+
+.ctnTexto h5{
+    font-weight: 600;
+
+}
+.cantidad select {
+    background: transparent; /* Fondo transparente */
+    border: none; /* Sin bordes */
+    outline: none; /* Sin contorno */
+    color: inherit; /* Hereda el color del texto circundante */
+    font-size: inherit; /* Tamaño del texto heredado */
+    font-family: inherit; /* Familia de fuente heredada */
+    padding: 0.2em 0.5em; /* Espaciado interno */
+    appearance: none; /* Elimina el estilo predeterminado del navegador */
+    -webkit-appearance: none; /* Compatibilidad con navegadores basados en WebKit */
+    -moz-appearance: none; /* Compatibilidad con Firefox */
+    background-image: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="black"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0em center;
+    background-size: 1.3rem;
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+  }
+  
+  .cantidad select:focus {
+    border-bottom: 2px solid currentColor; /* Subrayado al enfocar */
+  }
+  
+  .cantidad select option {
+    background: #fff; /* Fondo de las opciones */
+    color: #000; /* Texto de las opciones */
+  }
+  

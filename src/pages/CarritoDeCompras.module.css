@@ -1,0 +1,9 @@
+.ctn{
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo{
+    display: flex;
+    flex-direction: row;
+}
