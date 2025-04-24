@@ -1,6 +1,7 @@
 package com.trivalApi.CRUD.repositories;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
@@ -14,6 +15,7 @@ import com.trivalApi.CRUD.models.UsuarioModel;
 public interface  UsuarioRepository extends CrudRepository<UsuarioModel, Long> {
 
     //Create method 
-    public abstract ArrayList<UsuarioModel> findByCorreo(String correo); 
+    Optional<UsuarioModel> findByCorreo(String correo);
+
     
 }
