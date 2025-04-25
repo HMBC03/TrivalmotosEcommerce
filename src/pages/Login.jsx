@@ -14,7 +14,7 @@ import axios  from 'axios'
 
 
 function Login() {
-  const [credenciales, setCredenciales] = useState({ user: "", pass: "" });
+  const [credenciales, setCredenciales] = useState({ correo: "", password: "" });
 
 
   const actualizarInput = ({ target }) => {
@@ -31,7 +31,7 @@ function Login() {
     event.preventDefault(); 
   console.log(credenciales)
 
-  axios.post('http://localhost:4000/api/login', credenciales)
+  axios.post('http://localhost:8080/user/login', credenciales)
 
   .then(({data})=>{
     console.log(data)
@@ -64,7 +64,7 @@ function Login() {
               type={"email"}
               value={credenciales.user}
               funcion={actualizarInput}
-              name={"user"}
+              name={"correo"}
             />
             <div className={css.inputPass}>
               <Input
@@ -73,7 +73,7 @@ function Login() {
                 type={"password"}
                 value={credenciales.pass}
                 funcion={actualizarInput}
-                name={"pass"}
+                name={"password"}
               />
 
               <img src={ojoPass} alt="" />

@@ -1,4 +1,6 @@
 import css from "./Login.module.css";
+import { useState } from "react";
+import axios  from 'axios'
 
 import Input from "../components/Input";
 import Boton from "../components/Boton";
@@ -8,6 +10,36 @@ import ojoPass from "../assets/login/ojoPass.png";
 import { Link } from "react-router-dom";
 import Header from "../components/Header";
 export default function Register() {
+
+  const [credenciales, setCredenciales] = useState({ telefono: "", nombre: "", apellidos: "", correo: "", password: "" });
+
+
+  const actualizarInput = ({ target }) => {
+    const { name, value } = target;
+    setCredenciales({
+      ...credenciales,
+      [name]: value,
+    });
+
+
+  };
+
+  const enviarDatos = (event) => {
+    event.preventDefault();
+    console.log(credenciales)
+
+    axios.post('http://localhost:8080/user', credenciales)
+
+      .then(({ data }) => {
+        console.log(data)
+      })
+
+      .catch(({ response }) => {
+        console.log(response)
+      })
+  }
+
+
   return (
     <div className={css.body}>
       <div className={css.ctnInfo}>
@@ -19,14 +51,38 @@ export default function Register() {
           <h1>Registrese</h1>
           <div className={css.contenedortext}>
             <form className={css.form}>
-              <Input label={""} placeholder={"Nombre:"} type={"text"} />
-              <Input label={""} placeholder={"Teléfono:"} type={"number"} />
-              <Input label={""} placeholder={"E-mail:"} type={"email"} />
+
+              <Input
+                label={""}
+                placeholder={"Nombre:"}
+                type={"text"}
+                funcion={actualizarInput}
+                name={"nombre"} />
+              <Input
+                label={""}
+                placeholder={"Apellidos:"}
+                type={"text"}
+                funcion={actualizarInput}
+                name={"apellidos"} />
+              <Input
+                label={""}
+                placeholder={"Teléfono:"}
+                type={"number"}
+                funcion={actualizarInput}
+                name={"telefono"} />
+              <Input
+                label={""}
+                placeholder={"E-mail:"}
+                type={"email"}
+                funcion={actualizarInput}
+                name={"correo"} />
               <div className={css.inputPass}>
                 <Input
                   label={""}
                   placeholder={"Contraseña:"}
                   type={"password"}
+                  funcion={actualizarInput}
+                  name={"password"}
                 />
 
                 <img src={ojoPass} alt="" />
@@ -43,7 +99,7 @@ export default function Register() {
               </div>
 
               <br />
-              <Boton texto={"Unirse"} />
+              <Boton texto={"Unirse"} funcion={enviarDatos} />
               <h6 className={css.decoracion}>o</h6>
             </form>
 

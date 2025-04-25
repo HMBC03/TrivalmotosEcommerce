@@ -24,7 +24,7 @@ public class UsuarioService {
     //Create User
     public UsuarioModel createUser(UsuarioModel usuario) {
         Optional<UsuarioModel> userExists = usuarioRepository.findByCorreo(usuario.getCorreo());
-
+        //Verify if email exist in BD
         if (userExists.isPresent()) {
             throw new RuntimeException("El correo ingresado ya esta registrado");
 
@@ -60,7 +60,7 @@ public class UsuarioService {
 
     //Login USER
     public Optional<UsuarioModel> login(String correo, String password) {
-        return usuarioRepository.findByCorreo(correo)
+            return usuarioRepository.findByCorreo(correo)
                 .filter(usuario -> Util.checkPassword(password, usuario.getPassword()));
     }
 

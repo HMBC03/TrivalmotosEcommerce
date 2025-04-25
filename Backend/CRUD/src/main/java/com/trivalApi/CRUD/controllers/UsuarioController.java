@@ -1,4 +1,3 @@
-
 package com.trivalApi.CRUD.controllers;
 
 import java.util.ArrayList;
@@ -17,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.trivalApi.CRUD.models.UsuarioModel;
 import com.trivalApi.CRUD.services.UsuarioService;
-
 
 @RestController
 @RequestMapping("/user")//Server direction 
@@ -38,10 +36,8 @@ public class UsuarioController {
             return ResponseEntity.status(HttpStatus.CREATED).body(nuevoUsuario);
         } catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.CONFLICT).body(e.getMessage());
+        }
     }
-    }
-   
-    
 
     @GetMapping(path = "/{id}")
     public Optional<UsuarioModel> getById(@PathVariable("id") Long id) {
@@ -58,9 +54,8 @@ public class UsuarioController {
     public ResponseEntity<?> loginUser(@RequestBody UsuarioModel usuario) {
 
         Optional<UsuarioModel> usuarioOpt = usuarioService.login(usuario.getCorreo(), usuario.getPassword());
-
-        if (usuarioOpt.isPresent()) {
-            return ResponseEntity.ok(usuarioOpt.get());
+                if (usuarioOpt.isPresent()) {
+            return ResponseEntity.ok("Sesión Iniciada");
         } else {
             return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("Credenciales inválidas");
         }
