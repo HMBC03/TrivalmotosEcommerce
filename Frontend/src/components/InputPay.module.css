@@ -1,0 +1,42 @@
+.ctnInput {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    text-align: start;
+    background-color: transparent;
+}
+
+.ctnInput label {
+    font-weight: 800;
+    color: black;
+}
+
+.ctnInput input {
+    border: none;
+    padding: 0.4rem 0.5rem;
+    border: 1px solid rgba(0, 0, 0, 1);
+    border-radius: 0.4rem;
+    background-color: transparent;
+    color: #1E1C1C;
+    font-weight: 600;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+.ctnInput input::placeholder {
+    color: #1e1c1cda;
+    font-weight: 500;
+}
+
+.ctnInput input:focus {
+    cursor: text;
+    outline: none;
+}
+
+.error {
+    color: rgba(167, 0, 0, 0.801);
+    margin: 0;
+    font-weight: 500;
+    margin-left: 8px;
+    font-size: small;
+}

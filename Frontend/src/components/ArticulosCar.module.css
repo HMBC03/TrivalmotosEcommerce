@@ -1,0 +1,180 @@
+/* ═══ CARD PRODUCTO EN CARRITO ═══ */
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  padding: 0.7rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  cursor: pointer;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+.cardSelected {
+  background: rgba(238, 36, 36, 0.06);
+  border-color: rgba(238, 36, 36, 0.3);
+}
+
+.cardSelected:hover {
+  background: rgba(238, 36, 36, 0.08);
+  border-color: rgba(238, 36, 36, 0.4);
+}
+
+/* ═══ IMAGE ═══ */
+
+.imgWrap {
+  width: 3.5rem;
+  height: 3.5rem;
+  flex-shrink: 0;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 0.3rem;
+}
+
+.imgWrap img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* ═══ INFO ═══ */
+
+.info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.nombre {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 500;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.precioUnit {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.45rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.55);
+}
+
+/* ═══ CONTROLS ROW ═══ */
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.25rem;
+}
+
+/* ═══ STEPPER (+/-) ═══ */
+
+.stepper {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.stepBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.3rem;
+  height: 1.3rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 0;
+}
+
+.stepBtn:hover {
+  background: rgba(238, 36, 36, 0.15);
+  color: #EE2424;
+}
+
+.qty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.5rem;
+  height: 1.3rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: transparent;
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* ═══ SUBTOTAL ═══ */
+
+.subtotal {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: #fff;
+  flex: 1;
+  text-align: right;
+}
+
+/* ═══ DELETE BUTTON ═══ */
+
+.btnDelete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  flex-shrink: 0;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0;
+}
+
+.btnDelete:hover {
+  background: rgba(238, 36, 36, 0.12);
+  border-color: rgba(238, 36, 36, 0.25);
+  color: #EE2424;
+}
+
+/* ═══ RESPONSIVE ═══ */
+
+@media screen and (max-width: 850px) {
+  .card {
+    gap: 0.5rem;
+    padding: 0.6rem;
+  }
+
+  .imgWrap {
+    width: 3rem;
+    height: 3rem;
+  }
+}

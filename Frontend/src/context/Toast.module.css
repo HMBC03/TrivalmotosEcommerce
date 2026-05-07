@@ -1,0 +1,122 @@
+.contenedor {
+  position: fixed;
+  top: 1.5rem;
+  right: 1.5rem;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  min-width: 280px;
+  max-width: 400px;
+  pointer-events: all;
+  animation: slideIn 0.35s ease forwards;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ═══ TIPOS ═══ */
+
+.success {
+  background: #1a1a1a;
+  border-left: 4px solid #22c55e;
+  color: #fff;
+}
+
+.error {
+  background: #1a1a1a;
+  border-left: 4px solid #EE2424;
+  color: #fff;
+}
+
+.warning {
+  background: #1a1a1a;
+  border-left: 4px solid #f59e0b;
+  color: #fff;
+}
+
+/* ═══ ELEMENTOS ═══ */
+
+.icono {
+  font-size: 0.7rem;
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 1.2rem;
+  height: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.success .icono {
+  background: #22c55e;
+  color: #fff;
+}
+
+.error .icono {
+  background: #EE2424;
+  color: #fff;
+}
+
+.warning .icono {
+  background: #f59e0b;
+  color: #fff;
+}
+
+.mensaje {
+  flex: 1;
+  font-size: 0.52rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.cerrar {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-size: 0.55rem;
+  padding: 0.2rem;
+  flex-shrink: 0;
+  transition: color 0.2s ease;
+}
+
+.cerrar:hover {
+  color: #fff;
+}
+
+/* ═══ RESPONSIVE ═══ */
+
+@media screen and (max-width: 480px) {
+  .contenedor {
+    top: 1rem;
+    right: 0.5rem;
+    left: 0.5rem;
+  }
+
+  .toast {
+    min-width: 0;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "trivalmotos",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "axios": "^1.7.7",
+    "framer-motion": "^12.23.6",
+    "lucide-react": "^0.525.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-hook-form": "^7.56.1",
+    "react-icons": "^5.5.0",
+    "react-router-dom": "^6.26.2",
+    "react-slick": "^0.30.3",
+    "slick-carousel": "^1.8.1",
+    "sweetalert2": "^11.22.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.3",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.7",
+    "gh-pages": "^6.1.1",
+    "sass-embedded": "^1.79.4",
+    "vite": "^5.4.19"
+  }
+}

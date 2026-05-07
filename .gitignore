@@ -1,0 +1,25 @@
+# Environment variables
+.env
+*.env
+
+# Application properties (contains sensitive data)
+Backend/CRUD/src/main/resources/application.properties
+
+# IDE
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Node/NPM
+node_modules/
+npm-debug.log*
+
+# Maven
+Backend/CRUD/target/
+Backend/CRUD/.mvn/

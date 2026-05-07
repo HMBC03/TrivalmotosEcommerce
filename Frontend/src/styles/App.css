@@ -1,0 +1,14 @@
+#root {
+
+  margin: 0 ;
+  padding: 0;
+  /* asdasdsa */
+}
+
+.slick-prev::before,
+.slick-next::before {
+  color: rgb(238, 36, 36) !important; /* Cambia el color */
+  /* font-size:  !important; Cambia el tamaño si lo necesitas */
+}
+
+

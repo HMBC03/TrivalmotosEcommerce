@@ -1,0 +1,133 @@
+.ctnGeneral {
+    width: 100dvw;
+    max-width: 100dvw;
+}
+
+.ctn {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    gap: 2rem;
+    padding: 0 5rem;
+    height: calc(100dvh - 4rem);
+    
+    
+}
+
+.ctnTarjeta {
+  width: 100%;
+  display: grid;
+  grid-template-columns: calc(25% - 3px) calc(25% - 3px) calc(25% - 3px) calc(25% - 3px);
+  grid-template-rows: 2fr;
+  gap: 4px;
+  box-sizing: border-box;
+}
+
+
+.numeroTargeta {
+    grid-column: 1 / 3;
+    /* de la columna 1 hasta la 3 (exclusivo) = ocupa columnas 1 y 2 */
+
+}
+
+
+.nombrePersona {
+    grid-column: 1 / 5;
+    /* de la columna 1 hasta la 3 (exclusivo) = ocupa columnas 1 y 2 */
+
+}
+
+.ctnIzq {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    justify-content: center;
+
+
+
+}
+
+.ctnDer {
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+    justify-content: center;
+width: 100%;
+
+}
+
+.ctnProductos {
+    max-width: 350px;
+
+    height: 50dvh;
+
+    overflow: hidden;
+    overflow-y: auto;
+    /* margin: auto; */
+    margin-top: 2rem;
+}
+
+.ctnSubTotal {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 1);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-weight: 700;
+
+}
+
+.btnFinal {
+    margin: 0 auto;
+}
+
+
+
+@media screen and (max-width: 850px) {
+    .ctn {
+
+        grid-template-columns: 90dvw;
+        grid-template-rows: 1fr 1fr;
+        padding: 0 5%;
+        gap: 0;
+    }
+
+    .ctnProductos{
+        
+    }
+
+    .ctnTarjeta {
+        width: 100%;
+        display: grid;
+        grid-template-columns: calc(50% - 0.25rem) calc(50% - 0.25rem);
+
+        grid-template-rows: 3fr;
+        gap: 0.5rem;
+    }
+
+
+    .numeroTargeta,
+    .nombrePersona {
+        grid-column: 1 / 3;
+        /* de la columna 1 hasta la 3 (exclusivo) = ocupa columnas 1 y 2 */
+
+    }
+
+
+    .ctnSubTotal {
+        margin-top: 1rem;
+        padding-top: 0.5rem;
+    }
+
+    .ctnDer {
+        justify-content: start;
+    }
+}
+
+
+
+/* .ctnNumeroTargeta { grid-area: 1 / 1 / 2 / 5; } */
+/* .div2 { grid-area: 1 / 5 / 2 / 6; }
+.div3 { grid-area: 1 / 6 / 2 / 7; } */
+/* .ctnNombre { grid-area: 1 / 7 / 2 / 11; } */

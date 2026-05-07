@@ -1,0 +1,1230 @@
+/* ═══ LAYOUT GENERAL ═══ */
+
+.body {
+  overflow-x: clip;
+  width: 100%;
+}
+
+/* ═══ HERO BANNER ═══ */
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.heroCarousel {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.heroVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.heroVideoVisible {
+  opacity: 1;
+}
+
+.heroYtInner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 100vh;
+  min-width: 177.78vh;
+}
+
+.heroYtInner iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.heroImg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    rgba(0, 0, 0, 0.82) 0%,
+    rgba(0, 0, 0, 0.55) 45%,
+    rgba(0, 0, 0, 0.15) 100%
+  );
+  z-index: 2;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 3;
+  padding: 0 5%;
+  max-width: 55vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.heroBadge {
+  display: inline-block;
+  width: fit-content;
+  background: rgba(238, 36, 36, 0.85);
+  color: #fff;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 500;
+  padding: 0.25rem 0.8rem;
+  border-radius: 50px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.heroTitle {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 0.95;
+  margin: 0;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.heroAccent {
+  color: #EE2424;
+}
+
+.heroSub {
+  color: rgba(255, 255, 255, 0.75);
+  font-family: 'Inter', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 300;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 380px;
+}
+
+.heroCtas {
+  display: flex;
+  gap: 0.7rem;
+  align-items: center;
+  margin-top: 0.3rem;
+}
+
+.ctaPrimary {
+  display: inline-block;
+  background: #EE2424;
+  color: #fff !important;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 500;
+  font-size: 0.65rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  transition: background 0.6s ease, color 0.6s ease, box-shadow 0.6s ease, transform 0.3s ease;
+  text-decoration: none;
+}
+
+.ctaPrimary:hover {
+  background: #ffffff;
+  color: #111 !important;
+  transform: translateY(-1px);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.4);
+}
+
+.ctaSecondary {
+  display: inline-block;
+  color: #fff !important;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 400;
+  font-size: 0.65rem;
+  padding: 0.5rem 1.5rem;
+  border-radius: 6px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: border-color 0.2s, background 0.2s;
+  text-decoration: none;
+}
+
+.ctaSecondary:hover {
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.heroIndicators {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.heroDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.heroDotActive {
+  background: #EE2424;
+  border-color: #EE2424;
+  transform: scale(1.2);
+}
+
+/* ═══ CATEGORÍAS ═══ */
+
+.categoriasSection {
+  padding: 2rem 5%;
+  background: #f8f8f8;
+}
+
+.categoriasGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.8rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.categoriaCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 1rem 0.6rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s, box-shadow 0.2s;
+  text-decoration: none;
+}
+
+.categoriaCard:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+.categoriaIcono {
+  font-size: 1.5rem;
+}
+
+.categoriaNombre {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* ═══ SECCIÓN VENTA DE MOTOS - SLIDER ═══ */
+
+.motosSection {
+  padding: 3rem 5%;
+  background: #0a0a0a;
+  position: relative;
+  overflow: visible;
+}
+
+.motosSection::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.015) 1px,
+      rgba(255, 255, 255, 0.015) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.015) 1px,
+      rgba(255, 255, 255, 0.015) 2px
+    );
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+.motosSectionHeader {
+  text-align: center;
+  margin-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.motosSectionTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  margin: 0;
+}
+
+.motosSectionSub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0.3rem 0 0;
+}
+
+.motoSliderWrap {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  align-items: center;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  min-height: 350px;
+}
+
+.motoInfo {
+  position: relative;
+  min-height: 320px;
+}
+
+.motoInfoInner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.motoTag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.48rem;
+  font-weight: 500;
+  color: #EE2424;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+
+.motoNombre {
+  font-family: 'Oswald', sans-serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+  line-height: 0.9;
+}
+
+.motoModelo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.07);
+  line-height: 0.85;
+  letter-spacing: -0.02em;
+  margin-top: -0.2rem;
+}
+
+.motoSpecs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  margin-top: 0.3rem;
+}
+
+.motoSpecRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.25rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.motoSpecLabel {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.motoSpecValue {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 500;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.motoBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.6rem;
+}
+
+.motoColores {
+  display: flex;
+  gap: 0.4rem;
+  align-items: center;
+}
+
+.motoColorDot {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.25s;
+}
+
+.motoColorDot:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: scale(1.1);
+}
+
+.motoColorDotActive {
+  border-color: #EE2424;
+  box-shadow: 0 0 0 2px rgba(238, 36, 36, 0.3);
+  transform: scale(1.15);
+}
+
+.motoPrecioWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.motoPrecioDesde {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.42rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.35);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.motoPrecio {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #EE2424;
+}
+
+.motoSubtag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.25);
+  font-style: italic;
+  letter-spacing: 0.05em;
+}
+
+.motoImgWrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 280px;
+  overflow: visible;
+}
+
+.motoImg {
+  position: absolute;
+  max-width: 100%;
+  max-height: 320px;
+  object-fit: contain;
+  filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.5));
+}
+
+/* Controles del slider de motos */
+.motoControls {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.motoArrow {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #fff;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.motoArrow:hover {
+  border-color: #EE2424;
+  background: rgba(238, 36, 36, 0.1);
+  color: #EE2424;
+}
+
+.motoDots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.motoDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+.motoDotActive {
+  background: #EE2424;
+  border-color: #EE2424;
+  transform: scale(1.3);
+}
+
+/* ═══ SECCIONES GENERALES ═══ */
+
+.seccion {
+  padding: 2.5rem 5%;
+}
+
+.seccionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.2rem;
+}
+
+.seccionHeader h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.seccionHeaderCenter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  gap: 0.3rem;
+}
+
+.seccionHeaderCenter h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+  color: #111;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.verTodo {
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #EE2424 !important;
+  text-decoration: none;
+  transition: opacity 0.2s;
+}
+
+.verTodo:hover {
+  opacity: 0.7;
+}
+
+/* ═══ PRODUCTOS GRID IRREGULAR ═══ */
+
+.productosGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 180px 180px 280px;
+  grid-auto-rows: 180px;
+  gap: 0.4rem;
+  max-width: 65%;
+  margin: 0 auto;
+}
+
+.productoCard {
+  position: relative;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              box-shadow 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.productoCard:nth-child(1) {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.productoCard:nth-child(4) {
+  grid-column: span 3;
+}
+
+.productoCard:hover {
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+}
+
+.productoImgLink {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+}
+
+.productoImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  transition: filter 0.3s ease;
+}
+
+.productoCard:hover .productoImg {
+  filter: brightness(1.05);
+}
+
+.productoInfoTop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0.6rem 0.7rem;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.3) 65%,
+    transparent 100%
+  );
+}
+
+.productoInfoBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 0.6rem 0.7rem;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.35) 60%,
+    transparent 100%
+  );
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
+.productoNombre {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.productoNombreLink {
+  color: #fff !important;
+  text-decoration: none;
+}
+
+.productoPrecio {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #EE2424;
+  margin: 0;
+}
+
+.sinProductos {
+  grid-column: 1 / -1;
+  text-align: center;
+  color: #999;
+  padding: 2rem;
+}
+
+/* ═══ BANNER PROMOCIONAL ═══ */
+
+.promoBanner {
+  background: #0a0a0a;
+  padding: 3rem 5% 1.5rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: -1px;
+}
+
+.promoBanner::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.015) 1px,
+      rgba(255, 255, 255, 0.015) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.015) 1px,
+      rgba(255, 255, 255, 0.015) 2px
+    );
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+.promoContent {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.promoContent h2 {
+  font-family: 'Oswald', sans-serif;
+  color: #fff;
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin: 0;
+  line-height: 1.2;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.promoContent p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.65rem;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ═══ OPINIONES (horizontal scroll pinned) ═══ */
+
+.opinionesPinWrapper {
+  height: 250vh;
+  position: relative;
+  /* carbon fiber with curvature */
+  background-color: #d8d8d8;
+  background-image:
+    radial-gradient(ellipse at 50% 35%, rgba(255, 255, 255, 0.55) 0%, transparent 65%),
+    radial-gradient(ellipse at 50% 110%, rgba(0, 0, 0, 0.1) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.06) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.06) 75%),
+    linear-gradient(45deg, rgba(0, 0, 0, 0.06) 25%, transparent 25%, transparent 75%, rgba(0, 0, 0, 0.06) 75%);
+  background-size: 100% 100%, 100% 100%, 4px 4px, 4px 4px;
+  background-position: center, center, 0 0, 2px 2px;
+}
+
+.opinionesSticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding-top: 12vh;
+  overflow: hidden;
+}
+
+.opinionesHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1.2rem;
+  padding: 0 5%;
+  position: relative;
+  z-index: 1;
+}
+
+.opinionesTitulo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1a1a1a !important;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.opinionesSub {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.45);
+  margin: 0.3rem 0 0;
+}
+
+.opinionesTrack {
+  display: flex;
+  gap: 1.2rem;
+  padding: 0 5%;
+  position: relative;
+  z-index: 1;
+  width: max-content;
+}
+
+.opinionCard {
+  background: #fff;
+  border-radius: 10px;
+  padding: 1.3rem 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.7rem;
+  width: 320px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.opinionCard:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.stars {
+  color: #EE2424;
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+}
+
+.opinionTexto {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.58rem;
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 1.8;
+  margin: 0;
+  font-weight: 300;
+  flex: 1;
+}
+
+.opinionAutor {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.5rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.opinionAvatar {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #EE2424, #c91a1a);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.55rem;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 0.02em;
+  flex-shrink: 0;
+}
+
+.opinionAutorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.05rem;
+}
+
+.opinionAutorInfo strong {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.opinionAutorInfo span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.48rem;
+  color: rgba(0, 0, 0, 0.4);
+  font-weight: 400;
+}
+
+/* ═══ FOOTER ═══ */
+
+.footer {
+  background: #0a0a0a;
+  color: #ccc;
+  padding: 3rem 5% 1.5rem;
+  position: relative;
+}
+
+.footer::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.012) 1px,
+      rgba(255, 255, 255, 0.012) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(255, 255, 255, 0.012) 1px,
+      rgba(255, 255, 255, 0.012) 2px
+    );
+  background-size: 12px 12px;
+  pointer-events: none;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+
+.footerBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  max-width: 320px;
+}
+
+.footerLogo {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff !important;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+}
+
+.footerBrandDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.footerSocial {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+}
+
+.footerSocial a {
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footerSocial a:hover {
+  color: #EE2424;
+  transform: translateY(-2px);
+}
+
+.footerDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.06);
+  margin: 1.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.footerColTitle {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 0 0 0.6rem;
+}
+
+.footerCol ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.footerCol ul li,
+.footerCol ul li a {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.4);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerCol ul li a:hover {
+  color: #fff;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.footerBottom span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.25);
+  font-weight: 400;
+}
+
+.footerBottomRight {
+  text-align: right;
+}
+
+/* ═══ RESPONSIVE ═══ */
+
+@media (max-width: 1024px) {
+  .footerGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .motoSliderWrap {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 850px) {
+  .hero {
+    height: 100vh;
+  }
+
+  .heroTitle {
+    font-size: 2rem;
+  }
+
+  .heroContent {
+    padding: 0 1.2rem;
+  }
+
+  .categoriasGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .productosGrid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 150px 150px 150px 230px;
+    grid-auto-rows: 150px;
+    gap: 0.3rem;
+    max-width: 90%;
+  }
+
+  .productoCard:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  .productoCard:nth-child(4) {
+    grid-column: span 2;
+  }
+
+  .seccionHeader h2 {
+    font-size: 1rem;
+  }
+
+  .promoBanner {
+    padding: 2rem 5%;
+  }
+
+  .promoContent h2 {
+    font-size: 1.1rem;
+  }
+
+  .footerTop {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .footerGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+  }
+
+  .footerBottom {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.2rem;
+  }
+
+  /* Motos slider: stack vertical */
+  .motoSliderWrap {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .motoImgWrap {
+    order: -1;
+    min-height: 200px;
+  }
+
+  .motoInfo {
+    min-height: auto;
+  }
+
+  .motoNombre {
+    font-size: 1.6rem;
+  }
+
+  .motoModelo {
+    font-size: 2.5rem;
+  }
+
+  .motosSection {
+    padding: 2.5rem 4%;
+  }
+
+  .opinionesPinWrapper {
+    height: 200vh;
+  }
+
+  .opinionCard {
+    width: 280px;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 1.6rem;
+  }
+
+  .heroCtas {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .productosGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 130px 130px 130px 200px;
+    grid-auto-rows: 130px;
+    gap: 0.25rem;
+    max-width: 100%;
+  }
+
+  .productoInfoTop,
+  .productoInfoBottom {
+    padding: 0.4rem;
+  }
+
+  .seccion {
+    padding: 1.5rem 4%;
+  }
+
+  .motosSectionTitle {
+    font-size: 1.2rem;
+  }
+
+  .motoNombre {
+    font-size: 1.4rem;
+  }
+
+  .motoModelo {
+    font-size: 2rem;
+  }
+
+  .opinionesPinWrapper {
+    height: 180vh;
+  }
+
+  .opinionCard {
+    width: 260px;
+    padding: 1rem;
+  }
+
+  .opinionesTrack {
+    gap: 0.8rem;
+  }
+
+  .opinionesTitulo {
+    font-size: 1.1rem;
+  }
+}

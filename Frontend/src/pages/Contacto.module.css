@@ -1,0 +1,207 @@
+/* ═══ LAYOUT ═══ */
+
+.ctnGeneral {
+  min-height: 100vh;
+  background: #0a0a0a;
+  overflow-x: hidden;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+
+  /* CSS vars for Input component (dark theme) */
+  --input-color: #fff;
+  --input-label: rgba(255, 255, 255, 0.6);
+  --input-border: rgba(255, 255, 255, 0.12);
+  --input-placeholder: rgba(255, 255, 255, 0.3);
+  --loader-track: rgba(255, 255, 255, 0.06);
+  --loader-text: rgba(255, 255, 255, 0.35);
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ═══ CONTACT CONTENT ═══ */
+
+.contacto {
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  padding: 5.5rem 5% 3rem;
+  width: 100%;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* ═══ IMAGE ═══ */
+
+.imgWrap {
+  flex: 1;
+  min-width: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  position: sticky;
+  top: 5rem;
+}
+
+.imgWrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* ═══ FORM ═══ */
+
+.formWrap {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formWrap h2 {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+  margin: 0;
+}
+
+.formWrap h2 span {
+  color: #EE2424;
+}
+
+.formDesc {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.52rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  width: 100%;
+}
+
+.form br {
+  display: none;
+}
+
+/* ═══ SUBMIT BUTTON ═══ */
+
+.btnEnviar {
+  width: 100%;
+  padding: 0.6rem 1.5rem;
+  background: #EE2424;
+  border: none;
+  border-radius: 8px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 0.5rem;
+}
+
+.btnEnviar:hover {
+  background: #d41e1e;
+  box-shadow: 0 4px 16px rgba(238, 36, 36, 0.3);
+}
+
+/* ═══ CONTACT INFO ═══ */
+
+.infoExtra {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.infoItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.infoItem svg {
+  width: 1rem;
+  height: 1rem;
+  color: #EE2424;
+  flex-shrink: 0;
+}
+
+.infoItem span {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.45rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* ═══ RESPONSIVE ═══ */
+
+@media screen and (max-width: 850px) {
+  .contacto {
+    flex-direction: column;
+    padding: 5rem 4% 2rem;
+    gap: 1.5rem;
+  }
+
+  .imgWrap {
+    position: static;
+    max-height: 300px;
+  }
+
+  .imgWrap img {
+    max-height: 300px;
+  }
+
+  .formWrap h2 {
+    font-size: 1.1rem;
+  }
+
+  .infoExtra {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .contacto {
+    padding: 4.5rem 4% 2rem;
+    gap: 1rem;
+  }
+
+  .imgWrap {
+    max-height: 200px;
+    border-radius: 8px;
+  }
+
+  .imgWrap img {
+    max-height: 200px;
+    border-radius: 8px;
+  }
+
+  .formWrap h2 {
+    font-size: 0.95rem;
+  }
+
+  .formDesc {
+    font-size: 0.48rem;
+  }
+
+  .btnEnviar {
+    font-size: 0.55rem;
+    padding: 0.55rem 1rem;
+  }
+}

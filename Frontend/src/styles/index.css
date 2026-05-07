@@ -1,0 +1,163 @@
+html{
+  padding: 0;
+  margin: 0;
+  font-size: clamp(14px, 1.4vw + 1rem, 24px); //* / max 28 estaba  */
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Oswald', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  font-size: 2.2rem;
+  font-weight: 500;
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+h5 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+h6 {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+
+a {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  font-size: 0.8rem; /* 16px */
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+
+
+
+
+:root {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light;
+  color: rgb(0, 0, 0);
+  background-color: #e8e8e8;
+  background-image:
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.018) 1px,
+      rgba(0, 0, 0, 0.018) 2px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 1px,
+      rgba(0, 0, 0, 0.018) 1px,
+      rgba(0, 0, 0, 0.018) 2px
+    );
+  background-size: 12px 12px;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+
+  min-width: 240px;
+  min-height: 100vh;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100%
+}
+
+/* Ocultar scrollbar pero mantener scroll funcional */
+* {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+*::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+/* a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+} */

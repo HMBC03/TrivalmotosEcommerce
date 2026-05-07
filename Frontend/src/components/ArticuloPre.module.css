@@ -1,0 +1,213 @@
+/* ═══ PRODUCT CARD (LIST LAYOUT) ═══ */
+
+.card {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.25s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border-color: rgba(238, 36, 36, 0.3);
+  transform: translateY(-2px);
+}
+
+/* ═══ IMAGE ═══ */
+
+.imgWrap {
+  width: 120px;
+  height: 100px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 0.5rem;
+  overflow: hidden;
+}
+
+.imgWrap img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.card:hover .imgWrap img {
+  transform: scale(1.06);
+}
+
+/* ═══ INFO ═══ */
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  padding: 0.6rem 0.8rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.nombre {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.58rem;
+  font-weight: 600;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  line-height: 1.3;
+}
+
+.precio {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #EE2424;
+  margin: 0;
+}
+
+.nombreLink {
+  text-decoration: none;
+  display: block;
+}
+
+.nombreLink:hover .nombre {
+  color: #EE2424;
+}
+
+/* ═══ ACTIONS ═══ */
+
+.actions {
+  display: flex;
+  gap: 0.4rem;
+  padding: 0 1rem;
+  flex-shrink: 0;
+  align-items: center;
+}
+
+.btnAgregar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.4rem 0.8rem;
+  background: #EE2424;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.46rem;
+  font-weight: 600;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btnAgregar:hover {
+  background: #d41e1e;
+  box-shadow: 0 3px 10px rgba(238, 36, 36, 0.25);
+}
+
+.btnVer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.4rem 0.7rem;
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.46rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.btnVer:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+  color: #1a1a1a;
+}
+
+/* ═══ RESPONSIVE ═══ */
+
+@media screen and (max-width: 850px) {
+  .imgWrap {
+    width: 100px;
+    height: 85px;
+  }
+
+  .nombre {
+    font-size: 0.52rem;
+  }
+
+  .precio {
+    font-size: 0.65rem;
+  }
+
+  .btnAgregar,
+  .btnVer {
+    font-size: 0.42rem;
+    padding: 0.35rem 0.6rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .card {
+    flex-wrap: wrap;
+  }
+
+  .imgWrap {
+    width: 80px;
+    height: 70px;
+    padding: 0.3rem;
+  }
+
+  .info {
+    flex: 1;
+    padding: 0.4rem 0.5rem;
+    min-width: 120px;
+  }
+
+  .nombre {
+    font-size: 0.48rem;
+  }
+
+  .precio {
+    font-size: 0.58rem;
+  }
+
+  .actions {
+    width: 100%;
+    padding: 0 0.5rem 0.5rem;
+    gap: 0.3rem;
+  }
+
+  .btnAgregar {
+    flex: 1;
+    font-size: 0.4rem;
+    padding: 0.35rem 0.4rem;
+  }
+
+  .btnVer {
+    flex: 1;
+    font-size: 0.4rem;
+    padding: 0.35rem 0.4rem;
+  }
+}

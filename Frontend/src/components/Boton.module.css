@@ -1,0 +1,19 @@
+.boton {
+  border-radius: 8px;
+  width: 100%;
+  padding: 0.55rem 1.5rem;
+  border: none;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 600;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boton:hover {
+  filter: brightness(0.9);
+  box-shadow: 0 4px 14px rgba(238, 36, 36, 0.3);
+}

@@ -1,0 +1,37 @@
+    textarea {
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  color: black;
+  padding: 8px;
+    font-size: smaller;
+    font-family: 'Roboto';
+  resize: none; /* Evita que el usuario cambie el tamaño manualmente */
+  min-height: 140px;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+h2{
+    text-align: center;
+}
+.ctnPreCant{
+    display: flex;
+    flex-direction: row;
+    width: 49%;
+    justify-content: space-between;
+    gap: 2%;
+}
+
+
+form{
+    display: flex;
+    align-items: start;
+}
+
+.mensajeDeError{
+    color: rgba(167, 0, 0, 0.801);
+    font-size: small;
+    margin-top: -10px;    
+    font-weight: 500;
+
+}

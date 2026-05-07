@@ -1,0 +1,64 @@
+.ctnInput {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 100vw;
+  text-align: start;
+  background-color: transparent;
+}
+
+.ctnInput label {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 0.48rem;
+  color: var(--input-label, rgba(255, 255, 255, 0.6));
+  margin-bottom: 0.2rem;
+}
+
+.ctnInput input {
+  border: none;
+  padding: 0.55rem 0.6rem;
+  border-bottom: 1px solid var(--input-border, rgba(255, 255, 255, 0.12));
+  background-color: transparent;
+  color: var(--input-color, #fff);
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 0.52rem;
+  cursor: pointer;
+  outline: none;
+  box-shadow: none;
+  border-radius: 0;
+  -webkit-appearance: none;
+  transition: border-color 0.3s ease;
+}
+
+.ctnInput input::placeholder {
+  color: var(--input-placeholder, rgba(255, 255, 255, 0.3));
+}
+
+.ctnInput input:focus {
+  cursor: text;
+  outline: none;
+  box-shadow: none;
+  border-bottom-color: #EE2424;
+}
+
+.ctnInput input:-webkit-autofill,
+.ctnInput input:-webkit-autofill:hover,
+.ctnInput input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--input-color, #fff);
+  -webkit-box-shadow: 0 0 0px 1000px var(--input-autofill-bg, #1a1a1a) inset;
+  box-shadow: 0 0 0px 1000px var(--input-autofill-bg, #1a1a1a) inset;
+  border-bottom-color: #EE2424;
+  caret-color: var(--input-color, #fff);
+}
+
+.error {
+  color: #EE2424;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  margin-left: 0.2rem;
+  margin-top: 0.15rem;
+  font-size: 0.4rem;
+}
